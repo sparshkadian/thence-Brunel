@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 const RegistrationForm = () => {
   const navigate = useNavigate();
   const [formData, setFormDate] = useState({ userName: '', email: '' });
-  const [btnDisabled, setBtnDisabled] = useState(false);
+  const [btnDisabled, setBtnDisabled] = useState(true);
   const [emailError, setEmailError] = useState(false);
   const { userName, email } = formData;
 
@@ -13,24 +13,25 @@ const RegistrationForm = () => {
       ...prevValue,
       [e.target.id]: e.target.value,
     }));
+    validateForm(e.target.id, e.target.value);
+  };
+
+  const validateForm = (fieldId: string, fieldValue: string) => {
+    if (fieldId === 'userName') {
+      setBtnDisabled(!fieldValue.trim() || !email.trim());
+    } else if (fieldId === 'email') {
+      const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      const isValidEmail = emailRegex.test(fieldValue);
+      setBtnDisabled(!userName.trim() || !isValidEmail);
+      setEmailError(!isValidEmail);
+    }
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (!userName.trim() || !email.trim()) {
-      setBtnDisabled(true);
-      return;
+    if (!btnDisabled) {
+      navigate('/register/success');
     }
-
-    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    if (!emailRegex.test(email)) {
-      setBtnDisabled(true);
-      setEmailError(true);
-      return;
-    }
-
-    setBtnDisabled(false);
-    setEmailError(false);
   };
 
   return (
@@ -39,7 +40,7 @@ const RegistrationForm = () => {
         Registeration Form
       </h2>
 
-      <div className='manrope-semibold flex flex-col gap-1 items-center text-[56px] leading-[67.2px]'>
+      <div className='text-center manrope-semibold flex flex-col gap-1 items-center text-[50px] sm:text-[56px] leading-[67.2px]'>
         <p>Start your success</p>
         <p>Journey here!</p>
       </div>

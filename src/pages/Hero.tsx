@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 
 const Hero = () => {
   return (
-    <div className='mt-10 flex flex-col gap-10'>
+    <div className='mt-[60px] flex flex-col gap-10'>
       <SuccessStories />
       <Questions />
       <Footer />
