@@ -29,7 +29,7 @@ const FormSuccess = () => {
 
       <p className='text-[#727272] text-[20px] fixed bottom-10'>
         Redirecting you to Homepage in{' '}
-        <span className='manrope-semibold text-black font-medium'>
+        <span className='manrope-semibold text-black font-normal text-[20px] leading-[26px]'>
           5 Seconds
         </span>
       </p>
