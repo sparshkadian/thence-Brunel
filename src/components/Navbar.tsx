@@ -4,14 +4,14 @@ const Navbar = () => {
   const location = useLocation();
 
   return (
-    <div className='py-3 px-4 flex items-center justify-between'>
+    <div className='py-3 flex items-center justify-between'>
       <h1 className='text-4xl tracking-tight font-semibold'>Brunel</h1>
 
       <div className='flex items-center gap-4'>
         {location.pathname === '/' ? (
           <>
             <Link
-              to='/projects'
+              to='/register'
               className='text-sm border-2 py-4 px-5 rounded-full hover:bg-[#EAEAEA] transition-all duration-300 ease-in-out'
             >
               Get Projects
@@ -26,7 +26,7 @@ const Navbar = () => {
         ) : (
           <Link to='/'>
             <img
-              src='./close.png'
+              src='../close.png'
               alt='back-home'
               width={20}
               className='mr-5'

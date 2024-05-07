@@ -4,6 +4,11 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  padding: 0 20px;
+  padding-bottom: 30px;
+}
+
 .covered-by-your-grace-regular {
   font-family: 'Covered By Your Grace', cursive;
   font-weight: 400;
@@ -15,4 +20,8 @@
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
+}
+
+.accordian-questions:nth-child(1) {
+  margin-top: 0px;
 }
