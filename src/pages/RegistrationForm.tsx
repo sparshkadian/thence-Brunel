@@ -47,7 +47,7 @@ const RegistrationForm = () => {
 
       <form
         onSubmit={handleSubmit}
-        className='mt-5 flex flex-col gap-[24px] w-2/5'
+        className='mt-5 flex flex-col gap-[24px] w-2/3 md:w-2/5'
       >
         <input
           type='text'

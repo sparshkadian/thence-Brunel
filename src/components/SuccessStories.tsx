@@ -30,7 +30,7 @@ const SuccessStories = () => {
             width={50}
             className='self-center md:self-start'
           />
-          <button className='self-center md:self-start mt-5 flex items-center justify-between gap-2 text-sm rounded-[100px] h-[88px] w-[190px] py-[31px] px-[40px] bg-gradient-to-r from-[#1C1C1C] to-[#454444] text-white hover:bg-slate-500 hover:border-slate-500 transition-all duration-300 ease-in-out'>
+          <button className='self-center md:self-start mt-5 flex items-center justify-between gap-2 text-sm rounded-[100px] h-[88px] w-[190px] py-[31px] px-[40px] bg-[#1C1C1C] text-white hover:bg-[#454444] transition-all duration-300 ease-in-out'>
             <p>Explore More</p>
             <img src='../explore-more.png' alt='right-arrow' width={15} />
           </button>
