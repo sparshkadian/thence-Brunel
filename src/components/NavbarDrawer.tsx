@@ -27,13 +27,13 @@ const NavBarDrawer = ({
       <div className='flex flex-col gap-7'>
         <Link
           to='/register'
-          className='border-2 py-[26.11px] px-[41.78px] rounded-[107.06px] hover:bg-[#EAEAEA] transition-all duration-300 ease-in-out hover:text-black'
+          className='h-[77.22px] text-center border-[1.31px] border-[#EAEAEA] py-[26.11px] px-[41.78px] rounded-[107.06px] hover:bg-[#EAEAEA] transition-all duration-300 ease-in-out'
         >
           Get Projects
         </Link>
         <Link
           to='/'
-          className='py-[26.11px]  px-[49.61px] rounded-[107.06px] bg-[#1C1C1C]  text-white hover:bg-[#454444] transition-all duration-300 ease-in-out hover:text-white'
+          className='h-[77.22px] text-center py-[26.11px] pr-[49.61px] pl-[41.78px] rounded-[107.06px] bg-[#1C1C1C] text-white hover:bg-[#454444] transition-all duration-300 ease-in-out'
         >
           Onboard Talent
         </Link>

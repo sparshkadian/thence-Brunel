@@ -16,9 +16,17 @@ body {
 
 .manrope-semibold {
   font-family: 'Manrope', sans-serif;
-  font-optical-sizing: auto;
   font-weight: 600;
-  font-style: normal;
+}
+
+.manrope-medium {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 500;
+}
+
+.manrope-normal {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
 }
 
 .accordian-questions:nth-child(1) {

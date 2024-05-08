@@ -35,27 +35,26 @@ const RegistrationForm = () => {
   };
 
   return (
-    <div className='max-w-4xl mx-auto mt-20 flex flex-col items-center gap-4'>
-      <h2 className='covered-by-your-grace-regular text-[#2DA950] text-[36px] leading-[39.6px]'>
+    <div className='max-w-[588px] h-[538.22px] mx-auto relative mt-20 flex flex-col items-center gap-4'>
+      <h2 className='h-[28px] covered-by-your-grace-regular text-[#2DA950] text-[36px] leading-[39.6px]'>
         Registeration Form
       </h2>
 
-      <div className='text-center manrope-semibold flex flex-col gap-1 items-center text-[50px] sm:text-[56px] leading-[67.2px]'>
+      <div className='h-[134px] w-[588px] text-center manrope font-semibold flex flex-col items-center text-[50px] sm:text-[56px] leading-[67.2px] text-[#1C1C1C]'>
         <p>Start your success</p>
         <p>Journey here!</p>
       </div>
 
-      <form
-        onSubmit={handleSubmit}
-        className='mt-5 flex flex-col gap-[24px] w-2/3 md:w-2/5'
-      >
+      <form onSubmit={handleSubmit} className='mt-5 flex flex-col gap-[24px]'>
         <input
           type='text'
           id='userName'
           onChange={handleInputChange}
           value={userName}
           placeholder='Enter your name'
-          className='rounded-full py-4 pl-4 bg-[#EFEFEF] border-none focus:outline-none  focus:outline-[#537FFF] focus:bg-blue-100/50'
+          className='h-[75px] w-[417px] rounded-[64px] py-[24px] px-[36px] bg-[#EFEFEF] border focus:outline-none  focus:outline-[#537FF1] focus:bg-blue-100/50
+          placeholder:manrope-medium placeholder:text-[20px] placeholder:text-[#827A7A] placeholder:leading-[27.32px]
+          manrope-medium text-[20px] leading-[27.32px]'
         />
         <input
           type='email'
@@ -63,12 +62,20 @@ const RegistrationForm = () => {
           onChange={handleInputChange}
           value={email}
           placeholder='Enter your email'
-          className='rounded-full py-4 pl-4 bg-[#EFEFEF] border-none focus:outline-none focus:outline-blue-400 focus:bg-blue-100/50'
+          className='h-[75px] w-[417px] rounded-[64px] py-[24px] px-[36px] bg-[#EFEFEF] border focus:outline-none  focus:outline-[#537FF1] focus:bg-blue-100/50
+            placeholder:manrope-medium placeholder:text-[20px] placeholder:text-[#827A7A] placeholder:leading-[27.32px]
+            manrope-medium text-[20px] leading-[27.32px]'
         />
 
         {emailError && (
-          <div className='manrope-semibold font-medium text-[16px] leading-[21.86px] flex gap-2 items-center'>
-            <img src='../email-error.png' alt='error' width={16} />
+          <div className='manrope-medium text-[16px] leading-[21.86px] flex gap-2 items-center'>
+            <img
+              src='../email-error.png'
+              alt='error'
+              width={20}
+              height={20}
+              className='object-cover'
+            />
             <p className='text-[#FF0808]'>Enter a Valid email address</p>
           </div>
         )}
@@ -81,8 +88,8 @@ const RegistrationForm = () => {
           className={`${
             btnDisabled
               ? 'bg-[#C9C9C9] text-white'
-              : 'bg-gradient-to-r from-[#1C1C1C] to-[#454444] text-white border-none'
-          } manrope-semibold text-[18px] leading-[24.59px] rounded-full py-4 pl-4`}
+              : 'bg-[#1C1C1C] hover:bg-[#454444] transition-all ease-in-out duration-300 text-white border-none'
+          } h-[77.22px] w-[417px] manrope-semibold text-[18px] leading-[24.59px] rounded-full py-4 pl-4`}
         >
           Submit
         </button>
