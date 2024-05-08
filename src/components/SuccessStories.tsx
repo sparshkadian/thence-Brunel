@@ -2,7 +2,7 @@ import HeroImage from './HeroImage';
 
 const SuccessStories = () => {
   return (
-    <div className='flex flex-col items-center'>
+    <div className='relative flex flex-col items-center'>
       <h2 className='covered-by-your-grace-regular text-[#2DA950] text-[36px] leading-[39.6px]'>
         Success Stories
       </h2>
@@ -18,7 +18,6 @@ const SuccessStories = () => {
 
         {/* Right Panel */}
         <div className='md:flex-1 p-5 flex flex-col gap-10 self-start md:self-center ml-0 md:ml-20'>
-          {/* <img src='../grid.png' alt='grid' /> */}
           <div className='manrope-semibold text-[40px] leading-[48px] text-center md:text-left'>
             <p>Enhance fortune 50</p>
             <p> company's insights</p>
@@ -37,6 +36,12 @@ const SuccessStories = () => {
           </button>
         </div>
       </div>
+
+      <img
+        src='../grid.png'
+        alt='grid'
+        className='absolute right-0 top-[170px] z-[-1]'
+      />
     </div>
   );
 };
