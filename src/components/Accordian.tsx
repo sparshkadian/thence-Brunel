@@ -10,7 +10,7 @@ interface QuestionItem {
 
 const Accordion = () => {
   const [expandedQuestionId, setExpandedQuestionId] = useState<number | null>(
-    null
+    3
   );
 
   const handleQuestionClick = (questionId: number) => {
@@ -20,11 +20,11 @@ const Accordion = () => {
   };
 
   return (
-    <div className='w-full md:w-3/4 ml-auto sm:p-2 h-[578px] mr-20'>
+    <div className='w-[581px] ml-auto sm:p-2 mr-20'>
       {questionsArray.map((item: QuestionItem) => (
         <div
           key={item.id}
-          className='accordion-question mt-5 border-b-2 border-b-gray-300 pb-5'
+          className='accordion-question mt-10 border-b-2 border-b-gray-300 pb-5'
         >
           <div
             className='flex items-center justify-between gap-20 cursor-pointer'
@@ -45,16 +45,18 @@ const Accordion = () => {
           </div>
           <AnimatePresence>
             {expandedQuestionId === item.id && (
-              <motion.p
+              <motion.div
                 key={item.id}
                 initial={{ height: 0, opacity: 0 }}
                 animate={{ height: 'auto', opacity: 1 }}
                 exit={{ height: 0, opacity: 0 }}
                 transition={{ duration: 0.5 }}
-                className='manrope-semibold font-normal text-[15px] text-[#617275] leading-[24px] overflow-hidden'
+                className='overflow-hidden'
               >
-                {item.answer}
-              </motion.p>
+                <p className='manrope-semibold font-normal text-[15px] text-[#617275] leading-[24px] py-5 '>
+                  {item.answer}
+                </p>
+              </motion.div>
             )}
           </AnimatePresence>
         </div>
