@@ -8,7 +8,7 @@ const HeroImage = () => {
       <img
         src='../hero-img.png'
         alt='heroImage'
-        className='ml-[150px] max-w-[65%] object-contain rounded-[50px]'
+        className='ml-[230px] max-w-[60%] object-contain rounded-[50px]'
       />
 
       <TimeReduction />

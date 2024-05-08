@@ -17,8 +17,8 @@ const SuccessStories = () => {
         </div>
 
         {/* Right Panel */}
-        <div className='md:flex-1 p-5 flex flex-col gap-10 self-start md:self-center ml-0 md:ml-20'>
-          <div className='manrope-semibold text-[40px] leading-[48px] text-center md:text-left'>
+        <div className='md:flex-1 p-5 flex flex-col gap-10 self-start md:self-center ml-0 md:ml-[170px]'>
+          <div className='h-[192px] manrope-semibold text-[40px] leading-[48px] text-center md:text-left'>
             <p>Enhance fortune 50</p>
             <p> company's insights</p>
             <p>teams research</p>

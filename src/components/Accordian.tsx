@@ -40,7 +40,7 @@ const Accordion = () => {
                   : 'accordian-plus.png'
               }
               alt='open'
-              className='w-[12px] sm:w-[17px]'
+              className='w-[12px] sm:w-[24px] h-[24px]'
             />
           </div>
           <AnimatePresence>
@@ -53,7 +53,7 @@ const Accordion = () => {
                 transition={{ duration: 0.5 }}
                 className='overflow-hidden'
               >
-                <p className='manrope-semibold font-normal text-[15px] text-[#617275] leading-[24px] py-5 '>
+                <p className='manrope-normal  text-[15px] text-[#617275] leading-[24px] py-5 '>
                   {item.answer}
                 </p>
               </motion.div>

@@ -16,18 +16,7 @@ const Navbar = () => {
             : 'border border-[#EAEAEA] h-[111.17px] pl-10'
         } bg-[#fff]/80 rounded-[65.28px] py-[16.97px] pr-[20.89px] pl-[52.22px]  flex items-center justify-between`}
       >
-        <img
-          src='../logo.png'
-          alt='logo'
-          width={121}
-          height={30.5}
-          className={`${
-            location.pathname === '/register' ||
-            location.pathname === '/register/success'
-              ? 'absolute top-[31.89px] left-[52.22px]'
-              : ''
-          } `}
-        />
+        <img src='../logo.png' alt='logo' width={121} height={30.5} />
 
         <div className='flex items-center gap-[15.67px]'>
           {location.pathname === '/' ? (
@@ -54,7 +43,7 @@ const Navbar = () => {
                 height={64}
                 className={`${
                   location.pathname === '/register/success' ? 'hidden' : 'block'
-                } absolute top-[32px] left-[1324px] border border-[#CACACA] rounded-[40px] p-4`}
+                } border border-[#CACACA] rounded-[40px] p-4`}
               />
             </Link>
           )}
