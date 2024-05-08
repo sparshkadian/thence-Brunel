@@ -12,12 +12,13 @@ const SuccessStories = () => {
       </div>
       <div className='w-full mt-10 md:mt-20 md:grid md:grid-cols-2'>
         {/* Hero Image */}
-        <div className='md:block hidden'>
+        <div className='hidden md:block'>
           <HeroImage />
         </div>
 
         {/* Right Panel */}
-        <div className='md:flex-1 p-5 flex flex-col gap-5 self-start md:self-center ml-0 md:ml-20'>
+        <div className='md:flex-1 p-5 flex flex-col gap-10 self-start md:self-center ml-0 md:ml-20'>
+          {/* <img src='../grid.png' alt='grid' /> */}
           <div className='manrope-semibold text-[40px] leading-[48px] text-center md:text-left'>
             <p>Enhance fortune 50</p>
             <p> company's insights</p>
@@ -30,9 +31,9 @@ const SuccessStories = () => {
             width={50}
             className='self-center md:self-start'
           />
-          <button className='self-center md:self-start mt-5 flex items-center justify-between gap-2 text-sm rounded-[100px] h-[88px] w-[190px] py-[31px] px-[40px] bg-[#1C1C1C] text-white hover:bg-[#454444] transition-all duration-300 ease-in-out'>
+          <button className='manrope-semibold text-[20px] leading-[27.32px] self-center md:self-start md:mt-20 flex items-center justify-between gap-2 text-sm rounded-[100px] h-[88px] w-[210px] py-[31px] px-[40px] bg-[#1C1C1C] text-white hover:bg-[#454444] transition-all duration-300 ease-in-out'>
             <p>Explore More</p>
-            <img src='../explore-more.png' alt='right-arrow' width={15} />
+            <img src='../explore-more.png' alt='right-arrow' width={24} />
           </button>
         </div>
       </div>

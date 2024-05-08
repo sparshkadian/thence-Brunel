@@ -1,46 +1,50 @@
-import { questionsArray } from '../constants';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { questionsArray } from '../constants';
 
-const Accordian = () => {
-  const [selectedQuestion, setSelectedQuestion] = useState<number | null>(3);
+interface QuestionItem {
+  id: number;
+  question: string;
+  answer: string;
+}
 
-  const selectQuestion = (itemId: number): boolean => {
-    if (selectedQuestion !== itemId) {
-      setSelectedQuestion(itemId);
-      return true;
-    } else {
-      setSelectedQuestion(null);
-      return false;
-    }
+const Accordion = () => {
+  const [expandedQuestionId, setExpandedQuestionId] = useState<number | null>(
+    null
+  );
+
+  const handleQuestionClick = (questionId: number) => {
+    setExpandedQuestionId((prevId) =>
+      prevId === questionId ? null : questionId
+    );
   };
 
   return (
-    <div className='sm:p-2'>
-      {questionsArray.map((item) => (
+    <div className='w-full md:w-3/4 ml-auto sm:p-2 h-[578px] mr-20'>
+      {questionsArray.map((item: QuestionItem) => (
         <div
           key={item.id}
-          className='accordian-questions flex flex-col gap-5 mt-5 border-b-2 border-b-gray-300 pb-5'
+          className='accordion-question mt-5 border-b-2 border-b-gray-300 pb-5'
         >
-          <div className='flex items-center justify-between gap-20'>
+          <div
+            className='flex items-center justify-between gap-20 cursor-pointer'
+            onClick={() => handleQuestionClick(item.id)}
+          >
             <p className='manrope-semibold sm:text-[20px] leading-[28px] text-[#1C1C1C]'>
               {item.question}
             </p>
             <img
-              onClick={() => {
-                selectQuestion(item.id);
-              }}
               src={
-                selectedQuestion === item.id
+                expandedQuestionId === item.id
                   ? '../accordian-minus.png'
                   : 'accordian-plus.png'
               }
               alt='open'
-              className='cursor-pointer w-[12px] sm:w-[17px]'
+              className='w-[12px] sm:w-[17px]'
             />
           </div>
           <AnimatePresence>
-            {selectedQuestion === item.id && (
+            {expandedQuestionId === item.id && (
               <motion.p
                 key={item.id}
                 initial={{ height: 0, opacity: 0 }}
@@ -59,4 +63,4 @@ const Accordian = () => {
   );
 };
 
-export default Accordian;
+export default Accordion;

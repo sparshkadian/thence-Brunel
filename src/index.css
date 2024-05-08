@@ -24,3 +24,29 @@ body {
 .accordian-questions:nth-child(1) {
   margin-top: 0px;
 }
+
+/* HERO IMAGE COMPONENT */
+
+.time-reduction {
+  box-shadow: 0px 22.59px 36.14px 0px rgba(30, 30, 30, 0.1);
+}
+
+.time-redcution img {
+  transform: rotate(21.27deg);
+}
+
+.staff-deployment {
+  box-shadow: 0px 15.21px 35.49px 0px rgba(0, 0, 0, 0.1);
+}
+
+.expenses {
+  box-shadow: 0px 23.63px 37.81px 0px rgba(30, 30, 30, 0.1);
+  border: 1.18px solid;
+  border-image-source: linear-gradient(
+    159.14deg,
+    #3d3d3d 6.08%,
+    rgba(61, 61, 61, 0) 85.58%
+  );
+}
+
+/* QUESTIONS COMPONENT */
