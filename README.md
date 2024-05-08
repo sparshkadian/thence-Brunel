@@ -17,7 +17,7 @@ To install the necessary dependencies, run the following command in your termina
 npm install
 ```
 
-```Usage
+## Usage
 Once the dependencies are installed, you can start the development server by running:
-```
+
 This command will start the development server using Vite, and your React application will be available at http://localhost:5179 by default.
